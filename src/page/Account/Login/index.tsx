@@ -36,7 +36,7 @@ const Login = () => {
           </button>
           <Link
             className="font-sans text-sm underline text-davy-grey hover:text-alizarin-crimson"
-            to="/"
+            to="/register"
           >
             Đăng ký
           </Link>
