@@ -44,7 +44,7 @@ const Login = () => {
         <span className="md:text-sm text-xs mr-1">
           Bạn quên mật khẩu? lấy lại mật khẩu
         </span>
-        <Link className="md:text-sm text-xs underline hover:text-alizarin-crimson" to="">
+        <Link className="md:text-sm text-xs underline hover:text-alizarin-crimson" to="/forgotPassword">
           tại đây
         </Link>
       </form>
