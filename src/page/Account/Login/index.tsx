@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Breadcrumb from "@/components/Breadcrumb";
+import Button from "@/components/Button";
 
 const Login = () => {
   return (
@@ -31,12 +32,10 @@ const Login = () => {
           />
         </div>
         <div className="flex justify-start items-center gap-x-5 mt-7 mb-10">
-          <button className="font-sans border border-alizarin-crimson text-sm text-white bg-alizarin-crimson px-5 py-3 rounded-full hover:bg-white hover:text-alizarin-crimson">
-            Đăng nhập
-          </button>
+          <Button title="đăng nhập" />
           <Link
             className="font-sans text-sm underline text-davy-grey hover:text-alizarin-crimson"
-            to="/"
+            to="/register"
           >
             Đăng ký
           </Link>
@@ -44,7 +43,10 @@ const Login = () => {
         <span className="md:text-sm text-xs mr-1">
           Bạn quên mật khẩu? lấy lại mật khẩu
         </span>
-        <Link className="md:text-sm text-xs underline hover:text-alizarin-crimson" to="/forgotPassword">
+        <Link
+          className="md:text-sm text-xs underline hover:text-alizarin-crimson"
+          to="/forgotPassword"
+        >
           tại đây
         </Link>
       </form>
