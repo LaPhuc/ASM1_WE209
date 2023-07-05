@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { ForgotPassword, Login, Register } from "@/page/Account/index";
 
 import LayoutBase from "./components/Layout/Base";
+import CartPage from "./page/Cart";
 import HomePage from "./page/Home";
 import PageNotFound from "./page/PageNotFound";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
