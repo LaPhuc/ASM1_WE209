@@ -45,7 +45,7 @@ const Login = () => {
         </span>
         <Link
           className="md:text-sm text-xs underline hover:text-alizarin-crimson"
-          to=""
+          to="/forgotPassword"
         >
           tại đây
         </Link>

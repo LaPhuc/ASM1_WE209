@@ -1,6 +1,5 @@
+import { FiChevronRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
-import { FiChevronRight } from "react-icons/fi"
 
 interface IBreadcrumb {
   link?: string;
@@ -15,11 +14,14 @@ const Breadcrumb = ({ link, nameLink, name }: IBreadcrumb) => {
         Trang chủ
       </Link>
       {link && (
-        <Link className="hover:text-alizarin-crimson" to={link}>
-          {nameLink}
-        </Link>
+        <>
+          <FiChevronRight />
+          <Link className="hover:text-alizarin-crimson" to={link}>
+            {nameLink}
+          </Link>
+        </>
       )}
-      <FiChevronRight/>
+      <FiChevronRight />
       <p className="text-alizarin-crimson cursor-pointer">{name}</p>
     </div>
   );
