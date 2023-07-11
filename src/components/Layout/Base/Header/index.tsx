@@ -5,21 +5,21 @@ import { BsTelephone } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { SlHandbag } from "react-icons/sl";
-import Logo from '@/assets/logo-giay.png';
-import Carousel from "@/components/Carousel";
+
+import Logo from "@/assets/logo-giay.png";
 import ModelMenu from "@/components/ModelMenu";
 import ModelMenuResponsive from "@/components/ModelMenuResponsive";
-
-const slide = [
-  "https://bizweb.dktcdn.net/100/347/092/themes/708609/assets/slider_1.jpg?1688378513890",
-  "https://bizweb.dktcdn.net/100/347/092/themes/708609/assets/slider_2.jpg?1688378513890",
-  "https://bizweb.dktcdn.net/100/347/092/themes/708609/assets/slider_3.jpg?1688378513890",
-  "https://bizweb.dktcdn.net/100/347/092/themes/708609/assets/slider_5.jpg?1688378513890",
-];
+import { Link, useLocation } from "react-router-dom";
 
 const HeaderBase = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [isWideScreen, setIsWideScreen] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,15 +58,15 @@ const HeaderBase = () => {
               }
             >
               <div className="flex justify-center items-center p-4 bg-alizarin-crimson text-white text-sm">
-                <button className="px-2">Đăng nhập</button>
-                <button className="px-4">Đăng ký</button>
+                <Link to="/login" className="px-2">Đăng nhập</Link>
+                <Link to="/register" className="px-4">Đăng ký</Link>
               </div>
               <ul className="lg:gap-4 flex flex-col text-sm">
                 <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
-                  <a href="">Trang chủ</a>
+                  <Link to="/">Trang chủ</Link>
                 </li>
                 <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
-                  <a href="">Về chúng tôi</a>
+                  <Link to="">Về chúng tôi</Link>
                 </li>
                 <li className="r py-[10px] px-[15px] group border-b-2 border-gray-100">
                   <ModelMenuResponsive title="Sản phẩm" />
@@ -75,7 +75,7 @@ const HeaderBase = () => {
                   <ModelMenuResponsive title="Tin tức" />
                 </li>
                 <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
-                  <a href="">Liên hệ</a>
+                  <Link to="/contact">Liên hệ</Link>
                 </li>
               </ul>
             </nav>
@@ -86,11 +86,7 @@ const HeaderBase = () => {
               />
             )}
           </div>
-          <img
-            className="w-[160px]  cursor-pointer"
-            src={Logo}
-            alt=""
-          />
+          <img className="w-[160px]  cursor-pointer" src={Logo} alt="" />
           <div className="flex justify-center items-center gap-x-2 lg:w-[60%] w-auto">
             <div className="hidden lg:flex flex-1 justify-between items-center border rounded-3xl py-2">
               <input
@@ -119,28 +115,32 @@ const HeaderBase = () => {
                 </div>
                 <div className="absolute top-[52px] rounded-lg -left-[90px] z-20 hidden bg-white text-black w-60 group-hover:block hover:block">
                   <div className="grid grid-cols-1 w-full gap-y-3 py-5">
-                    <button className="w-[80%] mx-auto bg-alizarin-crimson text-white rounded-3xl h-12 border border-alizarin-crimson hover:bg-white hover:text-alizarin-crimson">
-                      Đăng ký
-                    </button>
-                    <button className="w-[80%] mx-auto bg-alizarin-crimson text-white rounded-3xl h-12 border border-alizarin-crimson hover:bg-white hover:text-alizarin-crimson">
-                      Đăng nhâp
-                    </button>
+                    <Link to="/register" className="w-[80%] mx-auto">
+                      <button className="w-full bg-alizarin-crimson text-white rounded-3xl h-12 border border-alizarin-crimson hover:bg-white hover:text-alizarin-crimson">
+                        Đăng ký
+                      </button>
+                    </Link>
+                    <Link to="/login" className="w-[80%] mx-auto">
+                      <button className="w-full bg-alizarin-crimson text-white rounded-3xl h-12 border border-alizarin-crimson hover:bg-white hover:text-alizarin-crimson">
+                        Đăng nhâp
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
-              <div className="sm:text-lg p-3 lg:p-4 border border-alizarin-crimson rounded-full bg-alizarin-crimson text-white cursor-pointer">
+              <Link to="/cart" className="sm:text-lg p-3 lg:p-4 border border-alizarin-crimson rounded-full bg-alizarin-crimson text-white cursor-pointer">
                 <SlHandbag />
-              </div>
+              </Link>
             </div>
           </div>
         </div>
         <div className="hidden text-sm lg:block mt-3 bg-alizarin-crimson text-white font-bold">
           <ul className="lg:gap-4 xl:max-w-[1200px] mx-auto lg:max-w-[1024px] md:max-w-[768px] max-w-[640px] px-3 md:p-0 uppercase flex items-center text-center ">
             <li className="flex items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4">
-              <a href="">Trang chủ</a>
+              <Link to="/">Trang chủ</Link>
             </li>
             <li className="flex items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4">
-              <a href="">Về chúng tôi</a>
+              <Link to="">Về chúng tôi</Link>
             </li>
             <li className="flex relative items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4 group cursor-pointer">
               <div className=" flex justify-between items-center">
@@ -157,14 +157,11 @@ const HeaderBase = () => {
               <ModelMenu />
             </li>
             <li className="flex items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4">
-              <a href="">Liên hệ</a>
+              <Link to="/contact">Liên hệ</Link>
             </li>
           </ul>
         </div>
       </header>
-      <div>
-        <Carousel autoSlide={true} slides={slide} />
-      </div>
     </div>
   );
 };
