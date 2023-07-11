@@ -1,4 +1,4 @@
-import SideBar from "@/components/Layout/admin/Sidebar/index";
+import LayoutAdmin from "@/components/Layout/Admin/LayoutAdmin/index";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const AdminLayout = () => {
   }, [darkMode]);
   return (
     <div className="dark:bg-[#212226] bg-white w-screen min-h-screen">
-      <SideBar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <LayoutAdmin darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="w-[calc(100vw-230px)] h-[calc(100vh)] ml-auto">
         <Outlet />
       </div>

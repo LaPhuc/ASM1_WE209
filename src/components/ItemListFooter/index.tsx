@@ -52,8 +52,8 @@ const ItemListFooter = ({ data }: IItemListFooter) => {
         <FaAngleRight
           className={
             open
-              ? "origin-center rotate-90 ease-in-out duration-500 md:hidden block"
-              : "origin-center rotate-0 ease-in-out duration-500 md:hidden block"
+              ? "origin-center -rotate-90 ease-in-out duration-500 md:hidden block"
+              : "origin-center rotate-90 ease-in-out duration-500 md:hidden block"
           }
         />
       </div>
