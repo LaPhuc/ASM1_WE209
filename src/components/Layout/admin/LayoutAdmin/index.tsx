@@ -12,12 +12,12 @@ import Logo from "@/assets/logo-giay.png";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
-interface ISideBar {
+interface ILayoutAdmin {
   darkMode: boolean;
   setDarkMode(value: boolean): void;
 }
 
-const SideBar = ({darkMode, setDarkMode}: ISideBar) => {
+const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [icon, setIcon] = useState<boolean>(false);
   const [isWideScreen, setIsWideScreen] = useState(false);
@@ -156,4 +156,4 @@ const SideBar = ({darkMode, setDarkMode}: ISideBar) => {
   );
 }
 
-export default SideBar;
+export default LayoutAdmin;

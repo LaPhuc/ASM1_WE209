@@ -5,7 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { SlHandbag } from "react-icons/sl";
-
+import Logo from '@/assets/logo-giay.png';
 import Carousel from "@/components/Carousel";
 import ModelMenu from "@/components/ModelMenu";
 import ModelMenuResponsive from "@/components/ModelMenuResponsive";
@@ -43,7 +43,7 @@ const HeaderBase = () => {
         <img
           className="lg:block hidden "
           src="https://bizweb.dktcdn.net/100/347/092/themes/708609/assets/banner.jpg?1688378513890"
-          alt="logo"
+          alt="banner"
         />
         <div className="xl:max-w-[1200px] mx-auto lg:max-w-[1024px] md:max-w-[768px] max-w-[640px] px-3 md:p-0 flex justify-between items-center my-4 ">
           <div className="block lg:hidden text-2xl">
@@ -88,7 +88,7 @@ const HeaderBase = () => {
           </div>
           <img
             className="w-[160px]  cursor-pointer"
-            src="https://bizweb.dktcdn.net/100/347/092/themes/708609/assets/logo.png?1688378513890"
+            src={Logo}
             alt=""
           />
           <div className="flex justify-center items-center gap-x-2 lg:w-[60%] w-auto">
