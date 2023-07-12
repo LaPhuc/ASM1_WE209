@@ -53,8 +53,8 @@ const HeaderBase = () => {
             <nav
               className={
                 open
-                  ? "fixed w-[50%] top-0 left-0 h-screen ease-in-out duration-500 bg-white z-50 shadow-2xl min-w-[205px]"
-                  : "fixed w-[50%] top-0 left-[-50%] h-screen ease-in-out duration-500 bg-white z-50"
+                  ? "fixed w-[50%] top-0 left-0 h-screen ease-in-out duration-500 bg-white z-50 shadow-2xl min-w-[205px] max-w-[300px]"
+                  : "fixed w-[50%] top-0 left-[-55%] h-screen ease-in-out duration-500 bg-white z-50 min-w-[205px] max-w-[300px]"
               }
             >
               <div className="flex justify-center items-center p-4 bg-alizarin-crimson text-white text-sm">
