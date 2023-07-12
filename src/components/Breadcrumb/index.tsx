@@ -9,7 +9,7 @@ interface IBreadcrumb {
 
 const Breadcrumb = ({ link, nameLink, name }: IBreadcrumb) => {
   return (
-    <div className="flex justify-start items-center gap-x-2 font-sans text-sm">
+    <div className="flex justify-start items-center gap-x-2 font-sans text-sm my-3">
       <Link className="hover:text-alizarin-crimson" to="/">
         Trang chủ
       </Link>

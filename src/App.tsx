@@ -2,13 +2,14 @@ import "./App.css";
 
 import { Route, Routes } from "react-router-dom";
 
-import { ForgotPassword, Login, Register } from "@/page/Account/index";
+import { ForgotPassword, Login, Register } from "@/page/Base/Account/index";
 
 import LayoutBase from "./components/Layout/Base";
-import CartPage from "./page/Cart";
-import HomePage from "./page/Home";
+import CartPage from "./page/Base/Cart";
+import HomePage from "./page/Base/Home";
 import PageNotFound from "./page/PageNotFound";
-import AdminLayout from "@/components/Layout/admin/index";
+import AdminLayout from "@/components/Layout/Admin/index";
+import Contact from "./page/Base/Contact";
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
       <Route path="/" element={<LayoutBase />}>
         <Route index element={<HomePage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="*" element={<PageNotFound />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}></Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }

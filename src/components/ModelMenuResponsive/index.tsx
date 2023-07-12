@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 interface IModelMenuResponsive {
   title: string;
@@ -13,9 +14,9 @@ const ModelMenuResponsive = ({ title }: IModelMenuResponsive) => {
         onClick={() => setOpenModel(!openModel)}
         className="flex items-center justify-start "
       >
-        <a className="" href="">
+        <Link className="" to="">
           <p>{title}</p>
-        </a>
+        </Link>
         <div className="ml-auto">
           <IoIosArrowDown
             className={
@@ -35,28 +36,28 @@ const ModelMenuResponsive = ({ title }: IModelMenuResponsive) => {
       >
         <ul className="">
           <li className="border-b-2 border-gray-100 py-[5px]">
-            <a
-              href=""
+            <Link
+              to=""
               className="py-[10px] pl-[30px] pr-[10px] relative before:absolute before:top-[16px] before:left-[10px] before:w-[9px] before:h-[9px] before:border-2 before:border-[#d7d7d7] before:rounded-[50%]"
             >
               ADIDAS
-            </a>
+            </Link>
           </li>
           <li className="border-b-2 border-gray-100 py-[5px]">
-            <a
-              href=""
+            <Link
+              to=""
               className="py-[10px] pl-[30px] pr-[10px] relative before:absolute before:top-[16px] before:left-[10px] before:w-[9px] before:h-[9px] before:border-2 before:border-[#d7d7d7] before:rounded-[50%]"
             >
               NIKE
-            </a>
+            </Link>
           </li>
           <li className="border-b-2 border-gray-100 py-[5px]">
-            <a
-              href=""
+            <Link
+              to=""
               className="py-[10px] pl-[30px] pr-[10px] relative before:absolute before:top-[16px] before:left-[10px] before:w-[9px] before:h-[9px] before:border-2 before:border-[#d7d7d7] before:rounded-[50%]"
             >
               Đồng hồ - phụ kiện điện tử
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
