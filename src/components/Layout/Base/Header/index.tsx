@@ -58,8 +58,12 @@ const HeaderBase = () => {
               }
             >
               <div className="flex justify-center items-center p-4 bg-alizarin-crimson text-white text-sm">
-                <Link to="/login" className="px-2">Đăng nhập</Link>
-                <Link to="/register" className="px-4">Đăng ký</Link>
+                <Link to="/login" className="px-2">
+                  Đăng nhập
+                </Link>
+                <Link to="/register" className="px-4">
+                  Đăng ký
+                </Link>
               </div>
               <ul className="lg:gap-4 flex flex-col text-sm">
                 <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
@@ -69,7 +73,7 @@ const HeaderBase = () => {
                   <Link to="">Về chúng tôi</Link>
                 </li>
                 <li className="r py-[10px] px-[15px] group border-b-2 border-gray-100">
-                  <ModelMenuResponsive title="Sản phẩm" />
+                  <Link to="/product">Sản Phẩm</Link>
                 </li>
                 <li className="r py-[10px] px-[15px] border-b-2 border-gray-100">
                   <ModelMenuResponsive title="Tin tức" />
@@ -128,7 +132,10 @@ const HeaderBase = () => {
                   </div>
                 </div>
               </div>
-              <Link to="/cart" className="sm:text-lg p-3 lg:p-4 border border-alizarin-crimson rounded-full bg-alizarin-crimson text-white cursor-pointer">
+              <Link
+                to="/cart"
+                className="sm:text-lg p-3 lg:p-4 border border-alizarin-crimson rounded-full bg-alizarin-crimson text-white cursor-pointer"
+              >
                 <SlHandbag />
               </Link>
             </div>
@@ -144,7 +151,7 @@ const HeaderBase = () => {
             </li>
             <li className="flex relative items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4 group cursor-pointer">
               <div className=" flex justify-between items-center">
-                <p>Sản phẩm</p>
+                <Link to="/product">Sản Phẩm</Link>
                 <IoIosArrowDown />
               </div>
               <ModelMenu />

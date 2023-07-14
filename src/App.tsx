@@ -22,7 +22,7 @@ function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<CartPage />} />
-        <Route path="/product" element={<ProductPage />} />
+        <Route path="product" element={<ProductPage />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}></Route>
       <Route path="*" element={<PageNotFound />} />
