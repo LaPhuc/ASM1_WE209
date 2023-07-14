@@ -7,7 +7,7 @@ const NewsPage = () => {
 
   return (
     <div className="xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] max-w-[640px]  mx-auto xl:px-0  lg:px-3 md:px-3 px-3 md:p-0 font-sans">
-      <div className="flex justify-center">
+      <div className="">
         <div className="">
           <Breadcrumb nameLink="tin tức" link="/news" name={"Tin tức"} />
           <h1 className="text-center text-2xl font-bold text-[#ea2f38]">
@@ -27,42 +27,46 @@ const NewsPage = () => {
                     setOpenModel(!openModel);
                     console.log(openModel);
                   }}
-                  className=" py-4 "
+                  className=" py-4 cursor-pointer"
                 >
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
                     <Link to={"#"}>Phụ kiện, Quần áo</Link> <IoIosArrowDown />{" "}
                   </div>
-                  {openModel ? (
+                  <div
+                    className={
+                      openModel
+                        ? "h-[90px] overflow-hidden ease-in-out duration-500"
+                        : "h-0 overflow-hidden ease-in-out duration-500"
+                    }
+                  >
                     <ul className="px-4">
                       <li
                         onClick={() => {
                           setOpenModel(!openModel);
                           console.log(openModel);
                         }}
-                        className="flex justify-between py-4 items-center hover:text-red-500 text-sm"
+                        className="flex justify-between p-2 items-center hover:text-red-500 text-sm cursor-pointer"
                       >
-                        <Link to={"#"}>Áo thể thao</Link> <IoIosArrowDown />{" "}
+                        <Link to={"#"}>Áo thể thao</Link>{" "}
                       </li>
                       <li
                         onClick={() => {
                           setOpenModel(!openModel);
                           console.log(openModel);
                         }}
-                        className="flex justify-between"
+                        className="flex justify-between p-2 items-center hover:text-red-500 text-sm cursor-pointer"
                       >
-                        <Link to={"#"}>Quần thể thao</Link> <IoIosArrowDown />{" "}
+                        <Link to={"#"}>Quần thể thao</Link>{" "}
                       </li>
                     </ul>
-                  ) : (
-                    ""
-                  )}
+                  </div>
                 </li>
-                <li className=" py-4 ">
+                <li className=" py-4 cursor-pointer">
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
                     <Link to={"#"}>Giày nam</Link> <IoIosArrowDown />{" "}
                   </div>
                 </li>
-                <li className=" py-4 ">
+                <li className=" py-4 cursor-pointer">
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
                     <Link to={"#"}>Giày nữ</Link> <IoIosArrowDown />{" "}
                   </div>
@@ -71,9 +75,9 @@ const NewsPage = () => {
             </div>
           </div>
           <div className="">
-            <h2 className="text-sm font-bold my-3">DANH MỤC</h2>
-            <div className="flex flex-col gap-4">
-              <div className="p-2 border border-slate-200 border-dashed flex gap-2">
+            <h2 className="text-sm font-bold my-3">SIÊU BÃO VỀ GIÁ</h2>
+            <div className="flex flex-col gap-4 ">
+              <div className="p-2 border border-slate-200 border-dashed flex gap-2 cursor-pointer">
                 <div className="lg:w-52 xl:w-52 w-20 ">
                   <img
                     className="w-full"
@@ -92,7 +96,7 @@ const NewsPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-2 border border-slate-200 border-dashed flex gap-2">
+              <div className="p-2 border border-slate-200 border-dashed flex gap-2 cursor-pointer">
                 <div className="lg:w-52 xl:w-52 w-20 ">
                   <img
                     className="w-full"
@@ -111,7 +115,7 @@ const NewsPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-2 border border-slate-200 border-dashed flex gap-2">
+              <div className="p-2 border border-slate-200 border-dashed flex gap-2 cursor-pointer">
                 <div className="lg:w-52 xl:w-52 w-20 ">
                   <img
                     className="w-full"
@@ -130,7 +134,7 @@ const NewsPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-2 border border-slate-200 border-dashed flex gap-2">
+              <div className="p-2 border border-slate-200 border-dashed flex gap-2 cursor-pointer">
                 <div className="lg:w-52 xl:w-52 w-20 ">
                   <img
                     className="w-full"
@@ -153,25 +157,8 @@ const NewsPage = () => {
           </div>
         </div>
         <div className=" lg:col-span-3 xl:col-span-3">
-          <div className="lg:flex xl:flex md:flex my-4">
-            <div>
-              <img
-                src="https://bizweb.dktcdn.net/thumb/large/100/347/092/articles/thoi-luong-pin-surface-pro-7-plus.jpg?v=1681646593570"
-                alt=""
-              />
-            </div>
-            <div className="lg:pl-4 xl:pl-4 md:pl-4">
-              <h3 className="lg:text-base xl:text-base text-sm font-bold pb-1 pt-3 md:pt-0 lg:pt-0 xl:pt-0">
-                <Link to={""}>Những lưu ý khi mua Surface đã qua sử dụng</Link>
-              </h3>
-              <div className="lg:text-base xl:text-base text-sm font-normal">
-                Surface là dòng máy tính bảng kết hợp laptop của nhà Microsoft,
-                nổi bật với thiết kế sang trọng, ...
-              </div>
-            </div>
-          </div>
           <div className="grid lg:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-4">
-            <div className="lg:flex xl:flex md:flex my-4">
+            <div className="lg:flex xl:flex md:flex my-4 cursor-pointer">
               <div>
                 <img
                   src="https://bizweb.dktcdn.net/thumb/large/100/347/092/articles/barcode-scanner.jpg?v=1665162268327"
@@ -190,7 +177,7 @@ const NewsPage = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:flex xl:flex md:flex my-4">
+            <div className="lg:flex xl:flex md:flex my-4 cursor-pointer">
               <div>
                 <img
                   src="https://bizweb.dktcdn.net/thumb/large/100/347/092/articles/cach-giat-giay-adidas-1.jpg?v=1659517810827"
@@ -209,7 +196,7 @@ const NewsPage = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:flex xl:flex md:flex my-4">
+            <div className="lg:flex xl:flex md:flex my-4 cursor-pointer">
               <div>
                 <img
                   src="https://bizweb.dktcdn.net/thumb/large/100/347/092/articles/size-giay-nike-2.jpg?v=1659517304383"
@@ -228,7 +215,7 @@ const NewsPage = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:flex xl:flex md:flex my-4">
+            <div className="lg:flex xl:flex md:flex my-4 cursor-pointer">
               <div>
                 <img
                   src="https://bizweb.dktcdn.net/thumb/large/100/347/092/articles/giay-chay-bo-tot-nhat-10.jpg?v=1659516326677"
