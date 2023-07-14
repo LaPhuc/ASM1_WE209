@@ -10,6 +10,7 @@ import HomePage from "./page/Base/Home";
 import PageNotFound from "./page/PageNotFound";
 import AdminLayout from "@/components/Layout/Admin/index";
 import Contact from "./page/Base/Contact";
+import ProductPage from "./page/Base/Product";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/product" element={<ProductPage />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}></Route>
       <Route path="*" element={<PageNotFound />} />
