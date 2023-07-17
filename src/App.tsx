@@ -8,8 +8,9 @@ import LayoutBase from "./components/Layout/Base";
 import CartPage from "./page/Base/Cart";
 import HomePage from "./page/Base/Home";
 import PageNotFound from "./page/PageNotFound";
-import AdminLayout from "@/components/Layout/Admin/index";
 import Contact from "./page/Base/Contact";
+import AdminLayout from "./components/Layout/admin";
+import ProductAdd from "./page/Admin/Product/Product-add";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<CartPage />} />
       </Route>
-      <Route path="/admin" element={<AdminLayout />}></Route>
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route path="products/add" element={<ProductAdd/>}/>
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
