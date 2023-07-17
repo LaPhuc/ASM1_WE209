@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
-import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 const NewsPage = () => {
   const [openModel, setOpenModel] = useState<boolean>(false);
 
   return (
-    <div className="xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] max-w-[640px]  mx-auto xl:px-0  lg:px-3 md:px-3 px-3 md:p-0 font-sans">
+    <div className="xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] max-w-[640px]  mx-auto xl:px-0  lg:px-3 md:px-3 px-3 md:p-0 font-sans mb-5">
       <div className="">
         <div className="">
-          <Breadcrumb nameLink="tin tức" link="/news" name={"Tin tức"} />
-          <h1 className="text-center text-2xl font-bold text-[#ea2f38]">
-            Tin tức
-          </h1>
+          <Breadcrumb name={"tin tức"} />
         </div>
+        <h1 className="text-center text-2xl font-bold text-[#ea2f38]">
+          Tin tức
+        </h1>
       </div>
 
       <div className="w-full lg:grid xl:grid lg:grid-cols-4 xl:grid-cols-4 flex flex-col-reverse gap-4">
@@ -22,6 +21,16 @@ const NewsPage = () => {
             <h2 className="text-sm font-bold my-3">DANH MỤC</h2>
             <div className="px-4 pb-4 border border-slate-200">
               <ul>
+                <li className=" py-4 cursor-pointer">
+                  <div className="flex justify-between items-center hover:text-red-500 text-sm">
+                    <Link to={"#"}>Giày nam</Link>{" "}
+                  </div>
+                </li>
+                <li className=" py-4 cursor-pointer">
+                  <div className="flex justify-between items-center hover:text-red-500 text-sm">
+                    <Link to={"#"}>Giày nữ</Link>{" "}
+                  </div>
+                </li>
                 <li
                   onClick={() => {
                     setOpenModel(!openModel);
@@ -30,45 +39,7 @@ const NewsPage = () => {
                   className=" py-4 cursor-pointer"
                 >
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
-                    <Link to={"#"}>Phụ kiện, Quần áo</Link> <IoIosArrowDown />{" "}
-                  </div>
-                  <div
-                    className={
-                      openModel
-                        ? "h-[90px] overflow-hidden ease-in-out duration-500"
-                        : "h-0 overflow-hidden ease-in-out duration-500"
-                    }
-                  >
-                    <ul className="px-4">
-                      <li
-                        onClick={() => {
-                          setOpenModel(!openModel);
-                          console.log(openModel);
-                        }}
-                        className="flex justify-between p-2 items-center hover:text-red-500 text-sm cursor-pointer"
-                      >
-                        <Link to={"#"}>Áo thể thao</Link>{" "}
-                      </li>
-                      <li
-                        onClick={() => {
-                          setOpenModel(!openModel);
-                          console.log(openModel);
-                        }}
-                        className="flex justify-between p-2 items-center hover:text-red-500 text-sm cursor-pointer"
-                      >
-                        <Link to={"#"}>Quần thể thao</Link>{" "}
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li className=" py-4 cursor-pointer">
-                  <div className="flex justify-between items-center hover:text-red-500 text-sm">
-                    <Link to={"#"}>Giày nam</Link> <IoIosArrowDown />{" "}
-                  </div>
-                </li>
-                <li className=" py-4 cursor-pointer">
-                  <div className="flex justify-between items-center hover:text-red-500 text-sm">
-                    <Link to={"#"}>Giày nữ</Link> <IoIosArrowDown />{" "}
+                    <Link to={"#"}>Giày thể thao</Link>
                   </div>
                 </li>
               </ul>
