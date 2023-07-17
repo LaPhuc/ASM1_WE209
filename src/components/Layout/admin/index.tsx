@@ -21,9 +21,9 @@ const AdminLayout = () => {
     }
   }, [darkMode]);
   return (
-    <div className="dark:bg-[#212226] bg-white w-screen min-h-screen">
+    <div className="dark:bg-[#212226] bg-white w-[100%]">
       <LayoutAdmin darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div className="w-[calc(100vw-230px)] h-[calc(100vh)] ml-auto">
+      <div className="w-[calc(100%-219px)] min-h-[calc(100vh)] ml-auto">
         <Outlet />
       </div>
     </div>

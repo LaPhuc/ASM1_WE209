@@ -62,7 +62,7 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
 
   return (
     <>
-      <div className="w-screen bg-white dark:bg-[#ffffff0d] border-b border-gray-300 dark:border-none">
+      <div className="w-[100%] bg-white dark:bg-[#ffffff0d] border-b border-gray-300 dark:border-none">
         <div className="md:mx-20 mx-10 flex items-center md:justify-end justify-between">
           <div
             className="md:hidden block px-2 cursor-pointer"
@@ -120,14 +120,14 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
         <img className="w-[80%] mt-5 h-auto mx-auto" src={Logo} alt="logo" />
         <ul className="list-none flex flex-col gap-4 pt-8">
           <li className=" relative text-lg font-medium gap-x-2 text-black dark:text-[#e4e4e4] cursor-pointer">
-            <Link to="" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
+            <Link to="/admin" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
               <AiOutlineDashboard className="text-3xl" />
               <h3>Dashboard</h3>
             </Link>
             <div className="dark:bg-[#00c6ab] bg-yellow-300 ease-in-out duration-500 w-0 rounded-r-3xl h-[56px] hover-effect"></div>
           </li>
           <li className=" relative  text-lg font-medium gap-x-2 text-black dark:text-[#e4e4e4] cursor-pointer">
-            <Link to="" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
+            <Link to="products" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
               <GoProjectRoadmap className="text-3xl" />
               <h3>Products</h3>
             </Link>
