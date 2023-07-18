@@ -1,5 +1,8 @@
+import "@/public/css/table.css";
+
+import { Table } from "antd";
+
 import ButtonAdmin from "@/components/ButtonAdmin";
-import { Space, Table, Tag } from "antd";
 
 import type { ColumnsType } from "antd/es/table";
 
@@ -117,13 +120,13 @@ const data: DataType[] = [
 const ListProducts = () => {
   return (
     <>
-      <h1 className="ml-16 mt-5 text-3xl font-semibold dark:text-white text-black">
+      <h1 className="md:ml-16 md:text-left text-center mt-5 text-3xl font-semibold dark:text-white text-black">
         Danh sách sản phẩm
       </h1>
       <Table
         columns={columns}
         dataSource={data}
-        className="bg-white w-[90%] ml-16 rounded-md mt-5 border border-[#f0f0f0]"
+        className=" bg-white md:w-[90%] md:ml-16 sm:mx-auto mx-2 rounded-md mt-5 border border-[#f0f0f0] w-[600px] overflow-x-scroll z-0"
       />
     </>
   );
