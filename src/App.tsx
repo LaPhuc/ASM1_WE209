@@ -8,7 +8,7 @@ import LayoutBase from "./components/Layout/Base";
 import CartPage from "./page/Base/Cart";
 import HomePage from "./page/Base/Home";
 import PageNotFound from "./page/PageNotFound";
-import AdminLayout from "@/components/Layout/Admin/index";
+import AdminLayout from "@/components/Layout/admin/index";
 import Contact from "./page/Base/Contact";
 import NewsPage from "./page/Base/News";
 

@@ -1,4 +1,4 @@
-import LayoutAdmin from "@/components/Layout/Admin/LayoutAdmin/index";
+import LayoutAdmin from "@/components/Layout/admin/LayoutAdmin/index";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 

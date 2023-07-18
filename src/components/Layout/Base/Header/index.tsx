@@ -8,8 +8,8 @@ import { SlHandbag } from "react-icons/sl";
 
 import Logo from "@/assets/logo-giay.png";
 import ModelMenu from "@/components/ModelMenu";
-import ModelMenuResponsive from "@/components/ModelMenuResponsive";
 import { Link, useLocation } from "react-router-dom";
+import ModelMenuResponsive from "@/components/ModelMenuResponsive";
 
 const HeaderBase = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -58,8 +58,12 @@ const HeaderBase = () => {
               }
             >
               <div className="flex justify-center items-center p-4 bg-alizarin-crimson text-white text-sm">
-                <Link to="/login" className="px-2">Đăng nhập</Link>
-                <Link to="/register" className="px-4">Đăng ký</Link>
+                <Link to="/login" className="px-2">
+                  Đăng nhập
+                </Link>
+                <Link to="/register" className="px-4">
+                  Đăng ký
+                </Link>
               </div>
               <ul className="lg:gap-4 flex flex-col text-sm">
                 <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
@@ -68,13 +72,13 @@ const HeaderBase = () => {
                 <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
                   <Link to="">Về chúng tôi</Link>
                 </li>
-                <li className="r py-[10px] px-[15px] group border-b-2 border-gray-100">
-                  <ModelMenuResponsive title="Sản phẩm" />
+                <li className="py-[10px] px-[15px] group border-b-2 border-gray-100">
+                  <ModelMenuResponsive title="Sản phẩm" link="/products" />
                 </li>
-                <li className="r py-[10px] px-[15px] border-b-2 border-gray-100">
-                  <ModelMenuResponsive title="Tin tức" />
+                <li className="py-[10px] px-[15px] group border-b-2 border-gray-100">
+                  <ModelMenuResponsive title="Tin tức" link="/news" />
                 </li>
-                <li className=" py-[10px] px-[15px] border-b-2 border-gray-100">
+                <li className="py-[10px] px-[15px] border-b-2 border-gray-100">
                   <Link to="/contact">Liên hệ</Link>
                 </li>
               </ul>
@@ -128,7 +132,10 @@ const HeaderBase = () => {
                   </div>
                 </div>
               </div>
-              <Link to="/cart" className="sm:text-lg p-3 lg:p-4 border border-alizarin-crimson rounded-full bg-alizarin-crimson text-white cursor-pointer">
+              <Link
+                to="/cart"
+                className="sm:text-lg p-3 lg:p-4 border border-alizarin-crimson rounded-full bg-alizarin-crimson text-white cursor-pointer"
+              >
                 <SlHandbag />
               </Link>
             </div>
@@ -150,11 +157,7 @@ const HeaderBase = () => {
               <ModelMenu />
             </li>
             <li className="flex relative items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4 group cursor-pointer">
-              <div className="flex justify-between items-center">
-                <p>Tin tức</p>
-                <IoIosArrowDown />
-              </div>
-              <ModelMenu />
+              <Link to="/news">Tin tức</Link>
             </li>
             <li className="flex items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4">
               <Link to="/contact">Liên hệ</Link>

@@ -1,51 +1,36 @@
-import { useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Link } from "react-router-dom";
 const NewsPage = () => {
-  const [openModel, setOpenModel] = useState<boolean>(false);
-
   return (
-    <div className="xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] max-w-[640px]  mx-auto xl:px-0  lg:px-3 md:px-3 px-3 md:p-0 font-sans mb-5">
-      <div className="">
-        <div className="">
-          <Breadcrumb name={"tin tức"} />
-        </div>
-        <h1 className="text-center text-2xl font-bold text-[#ea2f38]">
-          Tin tức
-        </h1>
-      </div>
+    <div className="xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] max-w-[640px]  mx-auto xl:px-0  lg:px-3 md:px-3 px-3 md:p-0 font-sans mb-10">
+      <Breadcrumb name={"tin tức"} />
+      <h1 className="text-center text-2xl font-bold text-[#ea2f38]">Tin tức</h1>
 
       <div className="w-full lg:grid xl:grid lg:grid-cols-4 xl:grid-cols-4 flex flex-col-reverse gap-4">
         <div className=" xl:col-span-1 lg:col-span-1">
-          <div className="">
+          <div>
             <h2 className="text-sm font-bold my-3">DANH MỤC</h2>
             <div className="px-4 pb-4 border border-slate-200">
               <ul>
                 <li className=" py-4 cursor-pointer">
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
-                    <Link to={"#"}>Giày nam</Link>{" "}
+                    <Link to="">Giày nam</Link>
                   </div>
                 </li>
                 <li className=" py-4 cursor-pointer">
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
-                    <Link to={"#"}>Giày nữ</Link>{" "}
+                    <Link to="">Giày nữ</Link>
                   </div>
                 </li>
-                <li
-                  onClick={() => {
-                    setOpenModel(!openModel);
-                    console.log(openModel);
-                  }}
-                  className=" py-4 cursor-pointer"
-                >
+                <li className=" py-4 cursor-pointer">
                   <div className="flex justify-between items-center hover:text-red-500 text-sm">
-                    <Link to={"#"}>Giày thể thao</Link>
+                    <Link to="">Giày thể thao</Link>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="">
+          <div>
             <h2 className="text-sm font-bold my-3">SIÊU BÃO VỀ GIÁ</h2>
             <div className="flex flex-col gap-4 ">
               <div className="p-2 border border-slate-200 border-dashed flex gap-2 cursor-pointer">
@@ -127,7 +112,7 @@ const NewsPage = () => {
             </div>
           </div>
         </div>
-        <div className=" lg:col-span-3 xl:col-span-3">
+        <div className="lg:col-span-3 xl:col-span-3">
           <div className="grid lg:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-4">
             <div className="lg:flex xl:flex md:flex my-4 cursor-pointer">
               <div>
@@ -138,9 +123,7 @@ const NewsPage = () => {
               </div>
               <div className="lg:pl-4 xl:pl-4 md:pl-4">
                 <h3 className="lg:text-base xl:text-base text-sm font-bold pb-1 pt-3 md:pt-0 lg:pt-0 xl:pt-0">
-                  <Link to={""}>
-                    Những lưu ý khi mua Surface đã qua sử dụng
-                  </Link>
+                  <Link to="">Những lưu ý khi mua Surface đã qua sử dụng</Link>
                 </h3>
                 <div className="lg:text-base xl:text-base text-sm font-normal">
                   Surface là dòng máy tính bảng kết hợp laptop của nhà
@@ -157,9 +140,7 @@ const NewsPage = () => {
               </div>
               <div className="lg:pl-4 xl:pl-4 md:pl-4">
                 <h3 className="lg:text-base xl:text-base text-sm font-bold pb-1 pt-3 md:pt-0 lg:pt-0 xl:pt-0">
-                  <Link to={""}>
-                    Những lưu ý khi mua Surface đã qua sử dụng
-                  </Link>
+                  <Link to="">Những lưu ý khi mua Surface đã qua sử dụng</Link>
                 </h3>
                 <div className="lg:text-base xl:text-base text-sm font-normal">
                   Surface là dòng máy tính bảng kết hợp laptop của nhà
@@ -176,9 +157,7 @@ const NewsPage = () => {
               </div>
               <div className="lg:pl-4 xl:pl-4 md:pl-4">
                 <h3 className="lg:text-base xl:text-base text-sm font-bold pb-1 pt-3 md:pt-0 lg:pt-0 xl:pt-0">
-                  <Link to={""}>
-                    Những lưu ý khi mua Surface đã qua sử dụng
-                  </Link>
+                  <Link to="">Những lưu ý khi mua Surface đã qua sử dụng</Link>
                 </h3>
                 <div className="lg:text-base xl:text-base text-sm font-normal">
                   Surface là dòng máy tính bảng kết hợp laptop của nhà
@@ -195,9 +174,7 @@ const NewsPage = () => {
               </div>
               <div className="lg:pl-4 xl:pl-4 md:pl-4">
                 <h3 className="lg:text-base xl:text-base text-sm font-bold pb-1 pt-3 md:pt-0 lg:pt-0 xl:pt-0">
-                  <Link to={""}>
-                    Những lưu ý khi mua Surface đã qua sử dụng
-                  </Link>
+                  <Link to="">Những lưu ý khi mua Surface đã qua sử dụng</Link>
                 </h3>
                 <div className="lg:text-base xl:text-base text-sm font-normal">
                   Surface là dòng máy tính bảng kết hợp laptop của nhà
