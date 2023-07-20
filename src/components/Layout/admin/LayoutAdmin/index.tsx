@@ -1,27 +1,28 @@
+import { useEffect, useRef, useState } from "react";
 import {
   AiOutlineDashboard,
-  AiOutlineUser,
   AiOutlineMenu,
+  AiOutlineUser,
 } from "react-icons/ai";
 import { BiCategory } from "react-icons/bi";
-import { GoProjectRoadmap } from "react-icons/go";
 import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { GoProjectRoadmap } from "react-icons/go";
+import { Link, useLocation } from "react-router-dom";
 
-import AvatarImage from "@/assets/user.png";
 import Logo from "@/assets/logo-giay.png";
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import AvatarImage from "@/assets/user.png";
 
 interface ILayoutAdmin {
   darkMode: boolean;
   setDarkMode(value: boolean): void;
 }
 
-const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
+const LayoutAdmin = ({ darkMode, setDarkMode }: ILayoutAdmin) => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [icon, setIcon] = useState<boolean>(false);
   const [isWideScreen, setIsWideScreen] = useState(false);
-
+  const [Url, setUrl] = useState("");
+  const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -29,6 +30,13 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
       setOpenMenu(false);
     }
   };
+
+  useEffect(() => {
+    if (Url !== location.pathname) {
+      setOpenMenu(false);
+      setUrl(location.pathname);
+    }
+  }, [Url, location.pathname]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -62,7 +70,7 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
 
   return (
     <>
-      <div className="w-screen bg-white dark:bg-[#ffffff0d] border-b border-gray-300 dark:border-none">
+      <div className="w-[100%] bg-white dark:bg-[#ffffff0d] border-b border-gray-300 dark:border-none">
         <div className="md:mx-20 mx-10 flex items-center md:justify-end justify-between">
           <div
             className="md:hidden block px-2 cursor-pointer"
@@ -100,7 +108,9 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
                 alt="avatar"
               />
               <div>
-                <div className="dark:text-white text-black text-md font-light">username</div>
+                <div className="dark:text-white text-black text-md font-light">
+                  username
+                </div>
                 <div className="px-3 py-1 rounded-2xl leading-4 font-medium dark:text-white text-[#00c6ab] dark:bg-[#00c6ab] border border-[#00c6ab] bg-white">
                   admin
                 </div>
@@ -113,35 +123,47 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
         ref={menuRef}
         className={
           openMenu
-            ? "dark:bg-[#292A2E] bg-white w-[220px] border-r border-gray-300 dark:border-[#c2e0ff14] h-screen fixed top-0 overflow-hidden ease-in-out duration-500 ml-0 z-10"
-            : "dark:bg-[#292A2E] bg-white w-[220px] border-r border-gray-300 dark:border-[#c2e0ff14] h-screen fixed top-0 overflow-hidden ease-in-out duration-500 md:ml-0 ml-[-220px]"
+            ? "dark:bg-[#292A2E] bg-white w-[220px] border-r border-gray-300 dark:border-[#c2e0ff14] h-screen fixed top-0 overflow-hidden ease-in-out duration-500 ml-0 z-20"
+            : "dark:bg-[#292A2E] bg-white w-[220px] border-r border-gray-300 dark:border-[#c2e0ff14] h-screen fixed top-0 overflow-hidden ease-in-out duration-500 md:ml-0 ml-[-220px] z-20"
         }
       >
         <img className="w-[80%] mt-5 h-auto mx-auto" src={Logo} alt="logo" />
         <ul className="list-none flex flex-col gap-4 pt-8">
           <li className=" relative text-lg font-medium gap-x-2 text-black dark:text-[#e4e4e4] cursor-pointer">
-            <Link to="" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
+            <Link
+              to="/admin"
+              className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div"
+            >
               <AiOutlineDashboard className="text-3xl" />
               <h3>Dashboard</h3>
             </Link>
             <div className="dark:bg-[#00c6ab] bg-yellow-300 ease-in-out duration-500 w-0 rounded-r-3xl h-[56px] hover-effect"></div>
           </li>
           <li className=" relative  text-lg font-medium gap-x-2 text-black dark:text-[#e4e4e4] cursor-pointer">
-            <Link to="" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
+            <Link
+              to="products"
+              className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div"
+            >
               <GoProjectRoadmap className="text-3xl" />
               <h3>Products</h3>
             </Link>
             <div className="dark:bg-[#00c6ab] bg-yellow-300 ease-in-out duration-500 w-0 rounded-r-3xl h-[56px] hover-effect"></div>
           </li>
           <li className=" relative text-lg font-medium gap-x-2 text-black dark:text-[#e4e4e4] cursor-pointer">
-            <Link to="" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
+            <Link
+              to=""
+              className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div"
+            >
               <BiCategory className="text-3xl" />
               <h3>Category</h3>
             </Link>
             <div className="dark:bg-[#00c6ab] bg-yellow-300 ease-in-out duration-500 w-0 rounded-r-3xl h-[56px] hover-effect"></div>
           </li>
           <li className=" relative  text-lg font-medium gap-x-2 text-black dark:text-[#e4e4e4] cursor-pointer">
-            <Link to="" className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div">
+            <Link
+              to=""
+              className="absolute w-full pl-[25%] py-[14px] flex items-center gap-2 hover-div"
+            >
               <AiOutlineUser className="text-3xl" />
               <h3>User</h3>
             </Link>
@@ -150,10 +172,10 @@ const LayoutAdmin = ({darkMode, setDarkMode}: ILayoutAdmin) => {
         </ul>
       </div>
       {openMenu && (
-        <div className="fixed top-0 w-[100vw] h-[100vh] filter"></div>
+        <div className="fixed top-0 w-[100vw] h-[100vh] filter z-10"></div>
       )}
     </>
   );
-}
+};
 
 export default LayoutAdmin;
