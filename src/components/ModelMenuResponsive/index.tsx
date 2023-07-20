@@ -3,10 +3,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 interface IModelMenuResponsive {
+  link: string;
   title: string;
 }
 
-const ModelMenuResponsive = ({ title }: IModelMenuResponsive) => {
+const ModelMenuResponsive = ({ title, link }: IModelMenuResponsive) => {
   const [openModel, setOpenModel] = useState<boolean>(false);
   return (
     <>
@@ -14,7 +15,7 @@ const ModelMenuResponsive = ({ title }: IModelMenuResponsive) => {
         onClick={() => setOpenModel(!openModel)}
         className="flex items-center justify-start "
       >
-        <Link className="" to="">
+        <Link className="" to={link}>
           <p>{title}</p>
         </Link>
         <div className="ml-auto">
