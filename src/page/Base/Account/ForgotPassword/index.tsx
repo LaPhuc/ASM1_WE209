@@ -47,7 +47,7 @@ const ForgotPassword = () => {
           Bạn quên mật khẩu? Nhập địa chỉ email để lấy lại mật khẩu qua email.
         </p>
         <div className="mb-4">
-          <p className="after:content-['*'] after:pl-1 mb-2">Email</p>
+          <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">Email</p>
           <input
             className={
               !errorMessage

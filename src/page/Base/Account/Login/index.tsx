@@ -16,7 +16,7 @@ const Login = () => {
           Nếu bạn đã có tài khoản, đăng nhập tại đây.
         </p>
         <div className="mb-4">
-          <p className="after:content-['*'] after:pl-1 mb-2">Email</p>
+          <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">Email</p>
           <input
             className="w-full h-10 border border-bright-gray placeholder:text-bright-gray placeholder:text-sm pl-5 rounded-sm outline-none"
             type="email"
@@ -24,7 +24,7 @@ const Login = () => {
           />
         </div>
         <div className="mb-4">
-          <p className="after:content-['*'] after:pl-1 mb-2">Mật khẩu</p>
+          <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">Mật khẩu</p>
           <input
             className="w-full h-10 border border-bright-gray placeholder:text-bright-gray placeholder:text-sm pl-5 rounded-sm outline-none"
             type="password"

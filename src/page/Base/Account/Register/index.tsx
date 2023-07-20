@@ -20,7 +20,7 @@ const Register = () => {
           className="font-sans w-[100%] mx-auto grid md:grid-cols-2 grid-cols-1 gap-x-10"
         >
           <div className="mb-4">
-            <p className="after:content-['*'] after:pl-1 mb-2">Họ và tên</p>
+            <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">Họ và tên</p>
             <input
               className="w-full h-10 border border-bright-gray placeholder:text-bright-gray placeholder:text-sm pl-5 rounded-sm outline-none"
               type="name"
@@ -28,7 +28,7 @@ const Register = () => {
             />
           </div>
           <div className="mb-4">
-            <p className="after:content-['*'] after:pl-1 mb-2">Email</p>
+            <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">Email</p>
             <input
               className="w-full h-10 border border-bright-gray placeholder:text-bright-gray placeholder:text-sm pl-5 rounded-sm outline-none"
               type="email"
@@ -36,7 +36,7 @@ const Register = () => {
             />
           </div>
           <div className="mb-4">
-            <p className="after:content-['*'] after:pl-1 mb-2">Mật khẩu</p>
+            <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">Mật khẩu</p>
             <input
               className="w-full h-10 border border-bright-gray placeholder:text-bright-gray placeholder:text-sm pl-5 rounded-sm outline-none"
               type="password"
@@ -44,7 +44,7 @@ const Register = () => {
             />
           </div>
           <div className="mb-4">
-            <p className="after:content-['*'] after:pl-1 mb-2">
+            <p className="after:content-['*'] after:text-alizarin-crimson after:pl-1 mb-2">
               Nhập lại mật khẩu
             </p>
             <input

@@ -12,6 +12,7 @@ import AdminLayout from "@/components/Layout/Admin/index";
 import Contact from "./page/Base/Contact";
 import Dashboard from "./page/Admin/dashboard";
 import ListProducts from "./page/Admin/Products/List";
+import ResetPassword from "./page/Base/Account/ResetPassword";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path="forgotPassword" element={<ForgotPassword />} />
         <Route path="register" element={<Register />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="resetPassword" element={<ResetPassword />} />
+        <Route path="resetPassword/:id" element={<ResetPassword />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
