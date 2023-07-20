@@ -8,10 +8,11 @@ import LayoutBase from "./components/Layout/Base";
 import CartPage from "./page/Base/Cart";
 import HomePage from "./page/Base/Home";
 import PageNotFound from "./page/PageNotFound";
-import AdminLayout from "@/components/Layout/Admin/index";
+import AdminLayout from "@/components/Layout/admin/index";
 import Contact from "./page/Base/Contact";
 import Dashboard from "./page/Admin/dashboard";
 import ListProducts from "./page/Admin/Products/List";
+import EditProduct from "./page/Admin/Products/Edit";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="products" element={<ListProducts />} />
+        <Route path="products/:id/edit" element={<EditProduct />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
