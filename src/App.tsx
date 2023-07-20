@@ -4,13 +4,13 @@ import { Route, Routes } from "react-router-dom";
 
 import { ForgotPassword, Login, Register } from "@/page/Base/Account/index";
 
+import AdminLayout from "./components/Layout/Admin";
 import LayoutBase from "./components/Layout/Base";
 import CartPage from "./page/Base/Cart";
-import HomePage from "./page/Base/Home";
-import PageNotFound from "./page/PageNotFound";
-import AdminLayout from "@/components/Layout/admin/index";
 import Contact from "./page/Base/Contact";
+import HomePage from "./page/Base/Home";
 import NewsPage from "./page/Base/News";
+import PageNotFound from "./page/PageNotFound";
 
 function App() {
   return (

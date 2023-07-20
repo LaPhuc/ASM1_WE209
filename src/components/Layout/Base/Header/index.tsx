@@ -76,7 +76,7 @@ const HeaderBase = () => {
                   <ModelMenuResponsive title="Sản phẩm" link="/products" />
                 </li>
                 <li className="py-[10px] px-[15px] group border-b-2 border-gray-100">
-                  <ModelMenuResponsive title="Tin tức" link="/news" />
+                  <Link to="/news">Tin tức</Link>
                 </li>
                 <li className="py-[10px] px-[15px] border-b-2 border-gray-100">
                   <Link to="/contact">Liên hệ</Link>
