@@ -25,4 +25,16 @@ export default class User {
       );
     });
   }
+  static resetPassword(email,password) {
+    return new Promise((resolve, reject) => {
+      connection.query(
+        "UPDATE user SET password = ? WHERE email = ?",
+        [password,email],
+        (err, results) => {
+          if (err) reject(err);
+          resolve(results);
+        }
+      );
+    });
+  }
 }
