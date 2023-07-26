@@ -1,5 +1,5 @@
 import User from "../models/user";
-import { signupSchema } from "../schemas/auth";
+import { signinSchema, signupSchema } from "../schemas/auth";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 export const Register = async (req, res) => {
@@ -27,3 +27,31 @@ export const Register = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+export const Login = async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const { error } = signinSchema.validate(req.body);
+      if (error) {
+        const errors = error.details.map((errorItem) => errorItem.message);
+        return res.status(400).json({
+          message: errors,
+        });
+      }
+      const user = await User.checkEmailExists(email);
+      if (!user) {
+        return res.status(404).json({ message: "Email không tồn tại" });
+      }
+      const passwordMatch = await bcrypt.compare(password, user.password);
+      if (!passwordMatch) {
+        return res.status(401).json({ message: "Mật khẩu không chính xác" });
+      }
+      const accessToken = jwt.sign({ id: user.id }, "asmweb209", { expiresIn: "1d" });
+      res.json({
+        user,
+        accessToken
+      });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  };
