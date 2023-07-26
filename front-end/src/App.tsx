@@ -13,6 +13,7 @@ import NewsPage from "./page/Base/News";
 import PageNotFound from "./page/PageNotFound";
 import Dashboard from "./page/Admin/dashboard";
 import ListProducts from "./page/Admin/Products/List";
+import ResetPassword from "./page/Base/Account/ResetPassword";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="resetPassword" element={<ResetPassword />} />
+        <Route path="resetPassword/:id" element={<ResetPassword />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
