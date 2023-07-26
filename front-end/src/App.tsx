@@ -13,6 +13,7 @@ import NewsPage from "./page/Base/News";
 import PageNotFound from "./page/PageNotFound";
 import Dashboard from "./page/Admin/dashboard";
 import ListProducts from "./page/Admin/Products/List";
+import EditProduct from "./page/Admin/Products/Edit";
 import ResetPassword from "./page/Base/Account/ResetPassword";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Dashboard />} />
         <Route path="products" element={<ListProducts />} />
+        <Route path="products/:id/edit" element={<EditProduct />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

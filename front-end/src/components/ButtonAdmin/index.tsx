@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 interface IButtonAdmin {
   title: string;
   text?: string;
@@ -7,6 +9,7 @@ interface IButtonAdmin {
 }
 
 const ButtonAdmin = ({ title, text, add, edit, remove }: IButtonAdmin) => {
+  const navigate = useNavigate();
   return (
     <>
       {add && (
@@ -16,7 +19,10 @@ const ButtonAdmin = ({ title, text, add, edit, remove }: IButtonAdmin) => {
       )}
       {edit && (
         <button
-          onClick={() => console.log(text)}
+          onClick={(e) => {
+            e.preventDefault();
+            navigate(`/admin/products/${text}/edit`);
+          }}
           className="font-sans border border-[#FDC85E] text-sm text-white bg-[#FDC85E] px-5 py-1 rounded-3xl hover:bg-white hover:text-[#FDC85E] ml-2"
         >
           {title}
