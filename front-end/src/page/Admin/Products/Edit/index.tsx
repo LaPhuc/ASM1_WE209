@@ -1,9 +1,9 @@
-import '@/public/css/buttomUpImage.css';
-import '@/public/css/image.css';
+import "@/public/css/buttomUpImage.css";
+import "@/public/css/image.css";
 
-import { Button, Form, Input, Select } from 'antd';
-import { ChangeEvent, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Button, Form, Input, Select } from "antd";
+import { ChangeEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const EditProduct = () => {
   const navigate = useNavigate();
@@ -86,7 +86,11 @@ const EditProduct = () => {
                   htmlFor="images"
                   className="w-full h-full flex justify-center items-center cursor-pointer"
                 >
-                  <img src={base64Image} alt="Selected" />
+                  <img
+                    className="w-auto h-full"
+                    src={base64Image}
+                    alt="Selected"
+                  />
                 </label>
               )}
             </label>
@@ -134,7 +138,7 @@ const EditProduct = () => {
             name="cate"
             label={<span className="dark:text-white text-base">Danh mục</span>}
           >
-            <Select defaultValue={"demo"} className="">
+            <Select>
               <Select.Option value="demo">Demo</Select.Option>
               <Select.Option value="demo 1">Demo 1</Select.Option>
             </Select>
