@@ -151,7 +151,7 @@ const HeaderBase = () => {
             </li>
             <li className="flex relative items-center border-b-2 border-alizarin-crimson ease-in-out duration-300 hover:border-white p-4 group cursor-pointer">
               <div className=" flex justify-between items-center">
-                <p>Sản phẩm</p>
+                <Link to="/product">Sản Phẩm</Link>
                 <IoIosArrowDown />
               </div>
               <ModelMenu />

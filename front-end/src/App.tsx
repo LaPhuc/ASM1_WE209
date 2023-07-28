@@ -16,6 +16,7 @@ import ListProducts from "./page/Admin/Products/List";
 import EditProduct from "./page/Admin/Products/Edit";
 import ResetPassword from "./page/Base/Account/ResetPassword";
 import AddProduct from "./page/Admin/Products/Add";
+import ProductPage from "./page/Base/Product";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="forgotPassword" element={<ForgotPassword />} />
         <Route path="register" element={<Register />} />
+        <Route path="product" element={<ProductPage />} />
         <Route path="news" element={<NewsPage />} />
         <Route path="login" element={<Login />} />
         <Route path="contact" element={<Contact />} />
