@@ -123,6 +123,9 @@ const ListProducts = () => {
       <h1 className="md:ml-16 md:text-left text-center mt-5 text-3xl font-semibold dark:text-white text-black">
         Danh sách sản phẩm
       </h1>
+      <div className="md:ml-14 md:text-left text-center my-2 text-3xl font-semibold">
+        <ButtonAdmin title="Thêm sản phẩm" link="add" add />
+      </div>
       <Table
         columns={columns}
         dataSource={data}

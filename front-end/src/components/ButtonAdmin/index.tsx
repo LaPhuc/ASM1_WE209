@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface IButtonAdmin {
   title: string;
@@ -6,16 +6,26 @@ interface IButtonAdmin {
   add?: boolean;
   edit?: boolean;
   remove?: boolean;
+  link?: string;
 }
 
-const ButtonAdmin = ({ title, text, add, edit, remove }: IButtonAdmin) => {
+const ButtonAdmin = ({
+  title,
+  text,
+  add,
+  edit,
+  remove,
+  link,
+}: IButtonAdmin) => {
   const navigate = useNavigate();
   return (
     <>
       {add && (
-        <button className="font-sans border border-[#00c6ab] text-sm text-white bg-[#00c6ab] px-5 py-1 rounded-3xl hover:bg-white hover:text-[#00c6ab] ml-2">
-          {title}
-        </button>
+        <Link to={link || ""}>
+          <button className="font-sans border border-[#00c6ab] text-sm text-white bg-[#00c6ab] px-5 py-1 rounded-3xl hover:bg-white hover:text-[#00c6ab] ml-2">
+            {title}
+          </button>
+        </Link>
       )}
       {edit && (
         <button

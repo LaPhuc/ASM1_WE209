@@ -1,6 +1,7 @@
-import LayoutAdmin from "@/components/Layout/Admin/LayoutAdmin/index";
+
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import LayoutAdmin from "./LayoutAdmin";
 
 const AdminLayout = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
