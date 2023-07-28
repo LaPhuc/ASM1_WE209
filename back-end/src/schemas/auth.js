@@ -33,3 +33,17 @@ export const signinSchema = joi.object({
         "string.min": "Mật khẩu phải có ít nhất {#limit} ký tự",
     }),
 });
+
+
+export const password = joi.object({
+    password: joi.string().required().min(6).messages({
+        "string.empty": "Mật khẩu không được để trống",
+        "any.required": "Trường mật khẩu là bắt buộc",
+        "string.min": "Mật khẩu phải có ít nhất {#limit} ký tự",
+    }),
+    confirmPassword: joi.string().required().valid(joi.ref("password")).messages({
+        "string.empty": "Xác nhận mật khẩu không được để trống",
+        "any.required": "Trường xác nhận mật khẩu là bắt buộc",
+        "any.only": "Xác nhận mật khẩu không khớp",
+    }),
+})
