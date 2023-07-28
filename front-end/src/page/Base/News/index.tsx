@@ -44,7 +44,7 @@ const listPosts: IPosts[] = [
 const NewsPage = () => {
   return (
     <div className="xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] max-w-[640px]  mx-auto xl:px-0  lg:px-3 md:px-3 px-3 md:p-0 font-sans mb-10">
-      <Breadcrumb name={"tin tức"} />
+      <Breadcrumb name="Tin tức" />
       <h1 className="text-center text-2xl font-bold text-[#ea2f38]">Tin tức</h1>
       <div className="w-full lg:grid xl:grid lg:grid-cols-4 xl:grid-cols-4 flex flex-col-reverse gap-4">
         <div className=" xl:col-span-1 lg:col-span-1">
